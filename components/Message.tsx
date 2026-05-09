@@ -25,7 +25,7 @@ export function Message({ message }: Props) {
     <div className="flex gap-3 max-w-[90%]">
       {/* Avatar */}
       <div className="shrink-0 mt-0.5 w-6 h-6 rounded bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-[10px] font-bold text-emerald-400 font-mono">
-        FA
+        AA
       </div>
 
       <div className="flex-1 min-w-0">

@@ -6,7 +6,7 @@ import { getQuote, getNews, getMarketContext } from '@/lib/tools';
 export const runtime = 'nodejs';
 export const maxDuration = 60;
 
-const SYSTEM_PROMPT = `You are FinAgent, an AI-powered financial intelligence terminal. You give sharp, data-driven analysis on stocks and crypto using live market data.
+const SYSTEM_PROMPT = `You are AlphaAgent MCP, an AI-powered financial intelligence terminal. You give sharp, data-driven analysis on stocks and crypto using live market data.
 
 ## Workflow for asset analysis requests:
 1. Call get_quote to fetch the live price, change, and 52-week range
@@ -102,7 +102,7 @@ export async function POST(req: Request) {
 
       get_market_context: tool({
         description:
-          'Get current macro market conditions: S&P 500 direction, VIX fear index, Gold, and Dollar index. Use this to assess whether the broad market environment supports or pressures the trade.',
+          'Get current macro market conditions: S&P 500 (SPY), Nasdaq (QQQ), Gold (GLD), and a fear/greed sentiment score. Use this to assess whether the broad market environment supports or pressures the trade.',
         parameters: z.object({}),
         execute: async () => {
           try {
@@ -114,7 +114,7 @@ export async function POST(req: Request) {
       }),
     },
     onFinish({ usage, finishReason }) {
-      console.log('[FinAgent chat]', {
+      console.log('[AlphaAgent MCP chat]', {
         inputTokens: usage.promptTokens,
         outputTokens: usage.completionTokens,
         finishReason,

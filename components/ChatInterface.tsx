@@ -85,7 +85,7 @@ export function ChatInterface() {
           {isLoading && messages[messages.length - 1]?.role === 'user' && (
             <div className="flex gap-3">
               <div className="shrink-0 w-6 h-6 rounded bg-emerald-900/40 border border-emerald-700/40 flex items-center justify-center text-[10px] font-bold text-emerald-400 font-mono">
-                FA
+                AA
               </div>
               <div className="flex items-center gap-1.5 text-gray-500 text-sm">
                 <Loader2 size={12} className="animate-spin" />
@@ -125,7 +125,7 @@ export function ChatInterface() {
             </button>
           </form>
           <p className="mt-1.5 text-[10px] text-gray-700 font-mono text-center">
-            Powered by Claude claude-sonnet-4-6 · Live data via Yahoo Finance · MCP 2024-11-05
+            Claude claude-sonnet-4-6 · Stocks: Finnhub · Crypto: CoinGecko · MCP 2024-11-05
           </p>
         </div>
       </div>
@@ -151,14 +151,14 @@ function Welcome({ onSuggestion }: { onSuggestion: (q: string) => void }) {
       <div className="text-center space-y-2">
         <div className="flex items-center justify-center gap-3 mb-4">
           <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-mono text-2xl font-bold text-white tracking-tight">FINAGENT</span>
+          <span className="font-mono text-2xl font-bold text-white tracking-tight">ALPHAAGENT MCP</span>
           <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
         </div>
         <p className="text-gray-500 text-sm font-mono">
           AI-powered financial intelligence · Live market data · Multi-step agent reasoning
         </p>
         <p className="text-gray-700 text-xs font-mono">
-          Tools: get_quote · get_news · get_market_context
+          Stocks: Finnhub · Crypto: CoinGecko · Macro: SPY / QQQ / GLD
         </p>
       </div>
 

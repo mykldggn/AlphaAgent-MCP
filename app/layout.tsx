@@ -9,9 +9,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'FinAgent — AI Financial Intelligence',
+  title: 'AlphaAgent MCP — AI Financial Intelligence',
   description:
-    'Real-time AI-powered financial analysis with live market data, news, and macro context.',
+    'AI agent for real-time financial analysis. Powered by Claude + MCP.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

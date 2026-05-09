@@ -1,6 +1,6 @@
 #!/usr/bin/env tsx
 /**
- * FinAgent MCP Server — stdio transport
+ * AlphaAgent MCP Server — stdio transport
  *
  * Exposes financial data tools via the Model Context Protocol.
  * Works with Claude Desktop, Cursor, and any stdio-compatible MCP client.
@@ -11,9 +11,9 @@
  * Claude Desktop config (~/.claude/claude_desktop_config.json):
  *   {
  *     "mcpServers": {
- *       "fin-agent": {
+ *       "alpha-agent-mcp": {
  *         "command": "tsx",
- *         "args": ["/path/to/FinAgent/mcp-server/index.ts"]
+ *         "args": ["/path/to/AlphaAgentMCP/mcp-server/index.ts"]
  *       }
  *     }
  *   }
@@ -79,4 +79,4 @@ server.tool(
 const transport = new StdioServerTransport();
 await server.connect(transport);
 
-process.stderr.write('[FinAgent MCP] Server running on stdio — ready for connections\n');
+process.stderr.write('[AlphaAgent MCP] Server running on stdio — ready for connections\n');

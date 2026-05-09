@@ -11,7 +11,7 @@ export default function Home() {
             <span className="w-2 h-2 rounded-full bg-emerald-600" />
             <span className="w-2 h-2 rounded-full bg-emerald-800" />
           </div>
-          <span className="font-mono text-sm font-bold text-white tracking-widest">FINAGENT</span>
+          <span className="font-mono text-sm font-bold text-white tracking-widest">ALPHAAGENT MCP</span>
           <span className="hidden sm:inline text-[11px] text-gray-600 font-mono border border-[#1f2937] rounded px-2 py-0.5">
             claude-sonnet-4-6
           </span>
@@ -25,7 +25,7 @@ export default function Home() {
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span className="text-emerald-500">LIVE DATA</span>
           </span>
-          <span className="hidden md:block">Yahoo Finance · 3 Tools</span>
+          <span className="hidden md:block">Finnhub · CoinGecko · 3 Tools</span>
         </div>
       </header>
 

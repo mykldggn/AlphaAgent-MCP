@@ -140,7 +140,8 @@ export function ObservabilityPanel({ data }: Props) {
         {/* Model info */}
         <div className="pt-2 border-t border-[#1f2937] space-y-1 text-[10px] text-gray-600">
           <p>Model: <span className="text-gray-500">claude-sonnet-4-6</span></p>
-          <p>Tools: <span className="text-gray-500">3 registered</span></p>
+          <p>Stocks: <span className="text-gray-500">Finnhub (60/min)</span></p>
+          <p>Crypto: <span className="text-gray-500">CoinGecko (free)</span></p>
           <p>Transport: <span className="text-gray-500">HTTP · MCP 2024-11-05</span></p>
         </div>
       </div>

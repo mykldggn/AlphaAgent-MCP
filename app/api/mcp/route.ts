@@ -1,5 +1,5 @@
 /**
- * FinAgent MCP Server — HTTP/JSON-RPC transport
+ * AlphaAgent MCP Server — HTTP/JSON-RPC transport
  *
  * Exposes the same financial tools via the Model Context Protocol over HTTP,
  * making them callable from any MCP-compatible client (Claude Desktop, agents, etc.)
@@ -92,7 +92,7 @@ export async function POST(req: NextRequest) {
       return ok(id, {
         protocolVersion: MCP_VERSION,
         capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: 'fin-agent', version: '1.0.0' },
+        serverInfo: { name: 'alpha-agent-mcp', version: '1.0.0' },
         instructions:
           'Real-time financial data tools: stock/crypto quotes, news, and macro market context.',
       });
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
 
     return err(id, -32601, `Method not found: ${method}`);
   } catch (e) {
-    console.error('[FinAgent MCP]', e);
+    console.error('[AlphaAgent MCP]', e);
     return err(id, -32000, (e as Error).message ?? 'Internal server error');
   }
 }
@@ -142,7 +142,7 @@ export async function POST(req: NextRequest) {
 // Allow MCP clients to discover the endpoint
 export async function GET() {
   return NextResponse.json({
-    name: 'fin-agent',
+    name: 'alpha-agent-mcp',
     version: '1.0.0',
     protocol: MCP_VERSION,
     tools: TOOLS.map((t) => t.name),
